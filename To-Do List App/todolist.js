@@ -1,8 +1,6 @@
 let addTaskBttn = document.getElementById('addTask')
 let taskInput = document.getElementById('task')
 let unorderedList = document.getElementById('addedTasks')
-
-
 let row = 1
 
 let newTask = function(){
@@ -20,8 +18,6 @@ let newTask = function(){
     newListItem.id = `li-${row}`
     newListItem.classList.add('listClass')
 
-    
-
     let removeBttn = document.createElement('button')
     removeBttn.type = 'button'
     removeBttn.classList.add('buttons')
@@ -33,6 +29,8 @@ let newTask = function(){
     newListItem.appendChild(removeBttn)
     unorderedList.appendChild(newListItem)
 
+    checkedTask()
+
     let removeTask = function (){
     unorderedList.removeChild(newListItem)
     }
@@ -42,6 +40,16 @@ let newTask = function(){
     row++
 }
 
-
-
+let checkedTask = function(){
+    let done = document.getElementById(`input-${row}`)
+    let labeled = document.getElementById(`label-${row}`)
+    done.addEventListener('change',function(event){
+        if(event.target.checked){
+            labeled.classList.add('marked')
+            
+        } else{
+            labeled.classList.remove('marked')
+        }
+    })
+}
 addTaskBttn.addEventListener('click',newTask)

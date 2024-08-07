@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.marked{
+    text-decoration: line-through;
+    font-weight:100;
+    
+    
+}
+
+.listClass{
+    list-style-type:none;
+}
+
+.tasksClass:checked{
+    accent-color: red;
+}
+
+
+
+
+
