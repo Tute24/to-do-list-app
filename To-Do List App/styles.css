@@ -1,23 +1,83 @@
 body{
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 5rem;  
+}
+
+#list{
+    background-color: beige;
+    max-width: 300px;
 }
 
 .marked{
     text-decoration: line-through;
-    font-weight:100;
-    
-    
+    font-weight:100;  
 }
 
 .listClass{
-    list-style-type:none;
+    list-style-type: none;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 0.5rem;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#taskInputArea{
+    margin-bottom: 1rem;
 }
 
 .tasksClass:checked{
-    accent-color: red;
+    accent-color: rgb(12, 231, 12);
 }
+
+.buttons{
+    margin-left: auto;
+    cursor: pointer;
+    background-color: beige;
+    border: none;
+    border-radius: 3rem;
+    color: rgb(156, 154, 154);
+    text-align: center;
+}
+
+
+
+
+.buttons:hover{
+    background-color:rgb(208, 208, 158) ;
+}
+
+li{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    
+}
+
+#task{
+    border-radius: 0.8rem;
+    border: none;
+    border-style:inset;
+    border-style: solid;
+    border-color: bisque;
+    background-color: beige;
+}
+
+#addTask{
+    background-color: burlywood;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
 
 
 
